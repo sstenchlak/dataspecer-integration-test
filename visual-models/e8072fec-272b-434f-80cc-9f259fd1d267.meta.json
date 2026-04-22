@@ -1,0 +1,22 @@
+{
+  "iri": "http://dataspecer.com/packages/local-root/fda5a5ac-bf6a-4d28-a5f0-89224a8d9726/visual-model",
+  "projectIri": "e8072fec-272b-434f-80cc-9f259fd1d267",
+  "types": [
+    "http://dataspecer.com/resources/local/visual-model"
+  ],
+  "userMetadata": {
+    "label": {
+      "en": "View for stenchlak dsv-ap"
+    },
+    "description": {
+      "en": "Visual model for the profile"
+    }
+  },
+  "metadata": {
+    "creationDate": "2026-04-22T09:54:59.870Z",
+    "modificationDate": "2026-04-22T09:56:07.935Z"
+  },
+  "_version": 1,
+  "_exportVersion": 2,
+  "_exportedBy": "http://localhost:3100"
+}
