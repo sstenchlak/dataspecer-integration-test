@@ -1,0 +1,170 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+<https://example.com/profile/vocabulary#> rdfs:member <https://example.com/profile/vocabulary#dsv:ApplicationProfileShape>, <https://example.com/profile/vocabulary#dsv:PropertyValueReuseShape>, <https://example.com/profile/vocabulary#dsv:TermProfileShape>, <https://example.com/profile/vocabulary#dsv:ClassProfileShape>, <https://example.com/profile/vocabulary#dsv:ObjectPropertyProfileShape>, <https://example.com/profile/vocabulary#dsv:DatatypePropertyProfileShape>, <https://example.com/profile/vocabulary#dsv:InvalidTermProfileShape>, <https://example.com/profile/vocabulary#dsv:PropertyProfileShape>, <https://example.com/profile/vocabulary#dsv:ApplicationProfileSpecificationDocumentShape>, <https://example.com/profile/vocabulary#dsv:VocabularySpecificationDocumentShape>.
+
+<https://example.com/profile/vocabulary#dsv:ApplicationProfileShape> a sh:NodeShape;
+    rdfs:seeAlso <https://example.com/profile/vocabulary#ApplicationProfile>;
+    sh:closed false;
+    sh:targetClass <https://w3id.org/dsv#ApplicationProfile>.
+
+<https://example.com/profile/vocabulary#dsv:PropertyValueReuseShape> a sh:NodeShape;
+    rdfs:seeAlso <https://example.com/profile/vocabulary#PropertyValueReuse>;
+    sh:closed false;
+    sh:targetClass <https://w3id.org/dsv#PropertyValueReuse>.
+
+<https://example.com/profile/vocabulary#dsv:PropertyValueReuseShape/4be87656> a sh:PropertyShape;
+    sh:name "reused from resource"@en;
+    sh:nodeKind sh:BlankNodeOrIRI;
+    sh:path <https://w3id.org/dsv#reusedFromResource>.
+
+<https://example.com/profile/vocabulary#dsv:PropertyValueReuseShape> sh:property <https://example.com/profile/vocabulary#dsv:PropertyValueReuseShape/4be87656>.
+
+<https://example.com/profile/vocabulary#dsv:PropertyValueReuseShape/-2c1f8c9d> a sh:PropertyShape;
+    sh:name "reused property"@en;
+    sh:nodeKind sh:BlankNodeOrIRI;
+    sh:path <https://w3id.org/dsv#reusedProperty>;
+    sh:class rdf:Property.
+
+<https://example.com/profile/vocabulary#dsv:PropertyValueReuseShape> sh:property <https://example.com/profile/vocabulary#dsv:PropertyValueReuseShape/-2c1f8c9d>.
+
+<https://example.com/profile/vocabulary#dsv:PropertyValueReuseShape/d6fdbf5> a sh:PropertyShape;
+    sh:name "reused as property"@en;
+    sh:nodeKind sh:BlankNodeOrIRI;
+    sh:path <https://w3id.org/dsv#reusedAsProperty>;
+    sh:class rdf:Property.
+
+<https://example.com/profile/vocabulary#dsv:PropertyValueReuseShape> sh:property <https://example.com/profile/vocabulary#dsv:PropertyValueReuseShape/d6fdbf5>.
+
+<https://example.com/profile/vocabulary#dsv:TermProfileShape> a sh:NodeShape;
+    rdfs:seeAlso <https://example.com/profile/vocabulary#TermProfile>;
+    sh:closed false;
+    sh:targetClass <https://w3id.org/dsv#TermProfile>.
+
+<https://example.com/profile/vocabulary#dsv:TermProfileShape/1b4df4a4> a sh:PropertyShape;
+    sh:name "profile of"@en;
+    sh:nodeKind sh:BlankNodeOrIRI;
+    sh:path <https://w3id.org/dsv#profileOf>;
+    sh:class <https://w3id.org/dsv#TermProfile>.
+
+<https://example.com/profile/vocabulary#dsv:TermProfileShape> sh:property <https://example.com/profile/vocabulary#dsv:TermProfileShape/1b4df4a4>.
+
+<https://example.com/profile/vocabulary#dsv:TermProfileShape/3c673b4e> a sh:PropertyShape;
+    sh:name "reuses property value"@en;
+    sh:nodeKind sh:BlankNodeOrIRI;
+    sh:path <https://w3id.org/dsv#reusesPropertyValue>;
+    sh:class <https://w3id.org/dsv#PropertyValueReuse>.
+
+<https://example.com/profile/vocabulary#dsv:TermProfileShape> sh:property <https://example.com/profile/vocabulary#dsv:TermProfileShape/3c673b4e>.
+
+<https://example.com/profile/vocabulary#dsv:TermProfileShape/-513533d4> a sh:PropertyShape;
+    sh:name "specializes"@en;
+    sh:nodeKind sh:BlankNodeOrIRI;
+    sh:path <https://w3id.org/dsv#specializes>;
+    sh:class <https://w3id.org/dsv#TermProfile>.
+
+<https://example.com/profile/vocabulary#dsv:TermProfileShape> sh:property <https://example.com/profile/vocabulary#dsv:TermProfileShape/-513533d4>.
+
+<https://example.com/profile/vocabulary#dsv:ClassProfileShape> a sh:NodeShape;
+    rdfs:seeAlso <https://example.com/profile/vocabulary#ClassProfile>;
+    sh:closed false;
+    sh:targetClass <https://w3id.org/dsv#ClassProfile>.
+
+<https://example.com/profile/vocabulary#dsv:ClassProfileShape/-5ce2cb25> a sh:PropertyShape;
+    sh:name "class role"@en;
+    sh:nodeKind sh:BlankNodeOrIRI;
+    sh:path <https://w3id.org/dsv#classRole>;
+    sh:class <http://www.w3.org/2004/02/skos/core#Concept>.
+
+<https://example.com/profile/vocabulary#dsv:ClassProfileShape> sh:property <https://example.com/profile/vocabulary#dsv:ClassProfileShape/-5ce2cb25>.
+
+<https://example.com/profile/vocabulary#dsv:ClassProfileShape/-7e2d9a22> a sh:PropertyShape;
+    sh:name "profiled class"@en;
+    sh:nodeKind sh:BlankNodeOrIRI;
+    sh:path <https://w3id.org/dsv#class>;
+    sh:class rdfs:Class.
+
+<https://example.com/profile/vocabulary#dsv:ClassProfileShape> sh:property <https://example.com/profile/vocabulary#dsv:ClassProfileShape/-7e2d9a22>, <https://example.com/profile/vocabulary#dsv:TermProfileShape/1b4df4a4>, <https://example.com/profile/vocabulary#dsv:TermProfileShape/3c673b4e>, <https://example.com/profile/vocabulary#dsv:TermProfileShape/-513533d4>.
+
+<https://example.com/profile/vocabulary#dsv:ObjectPropertyProfileShape> a sh:NodeShape;
+    rdfs:seeAlso <https://example.com/profile/vocabulary#ObjectPropertyProfile>;
+    sh:closed false;
+    sh:targetClass <https://w3id.org/dsv#ObjectPropertyProfile>.
+
+<https://example.com/profile/vocabulary#dsv:ObjectPropertyProfileShape/3a9af1cf> a sh:PropertyShape;
+    sh:name "range"@en;
+    sh:nodeKind sh:BlankNodeOrIRI;
+    sh:path <https://w3id.org/dsv#range>;
+    sh:class <https://w3id.org/dsv#ClassProfile>.
+
+<https://example.com/profile/vocabulary#dsv:ObjectPropertyProfileShape> sh:property <https://example.com/profile/vocabulary#dsv:ObjectPropertyProfileShape/3a9af1cf>.
+
+<https://example.com/profile/vocabulary#dsv:PropertyProfileShape/e9586c3> a sh:PropertyShape;
+    sh:name "profiled property"@en;
+    sh:nodeKind sh:BlankNodeOrIRI;
+    sh:path <https://w3id.org/dsv#property>;
+    sh:class rdf:Property.
+
+<https://example.com/profile/vocabulary#dsv:ObjectPropertyProfileShape> sh:property <https://example.com/profile/vocabulary#dsv:PropertyProfileShape/e9586c3>.
+
+<https://example.com/profile/vocabulary#dsv:PropertyProfileShape/-6f56dc3> a sh:PropertyShape;
+    sh:name "domain"@en;
+    sh:nodeKind sh:BlankNodeOrIRI;
+    sh:path <https://w3id.org/dsv#domain>;
+    sh:class <https://w3id.org/dsv#ClassProfile>.
+
+<https://example.com/profile/vocabulary#dsv:ObjectPropertyProfileShape> sh:property <https://example.com/profile/vocabulary#dsv:PropertyProfileShape/-6f56dc3>.
+
+<https://example.com/profile/vocabulary#dsv:PropertyProfileShape/-dc2b69c> a sh:PropertyShape;
+    sh:name "kardinalita"@cs, "cardinality"@en;
+    sh:nodeKind sh:BlankNodeOrIRI;
+    sh:path <https://w3id.org/dsv#cardinality>;
+    sh:class <http://www.w3.org/2004/02/skos/core#Concept>.
+
+<https://example.com/profile/vocabulary#dsv:ObjectPropertyProfileShape> sh:property <https://example.com/profile/vocabulary#dsv:PropertyProfileShape/-dc2b69c>.
+
+<https://example.com/profile/vocabulary#dsv:PropertyProfileShape/4bd43ddd> a sh:PropertyShape;
+    sh:name "requirement level"@en;
+    sh:nodeKind sh:BlankNodeOrIRI;
+    sh:path <https://w3id.org/dsv#requirementLevel>;
+    sh:class <http://www.w3.org/2004/02/skos/core#Concept>.
+
+<https://example.com/profile/vocabulary#dsv:ObjectPropertyProfileShape> sh:property <https://example.com/profile/vocabulary#dsv:PropertyProfileShape/4bd43ddd>, <https://example.com/profile/vocabulary#dsv:TermProfileShape/1b4df4a4>, <https://example.com/profile/vocabulary#dsv:TermProfileShape/3c673b4e>, <https://example.com/profile/vocabulary#dsv:TermProfileShape/-513533d4>.
+
+<https://example.com/profile/vocabulary#dsv:DatatypePropertyProfileShape> a sh:NodeShape;
+    rdfs:seeAlso <https://example.com/profile/vocabulary#DatatypePropertyProfile>;
+    sh:closed false;
+    sh:targetClass <https://w3id.org/dsv#DatatypePropertyProfile>.
+
+<https://example.com/profile/vocabulary#dsv:DatatypePropertyProfileShape/2664e875> a sh:PropertyShape;
+    sh:name "datatype"@en;
+    sh:nodeKind sh:BlankNodeOrIRI;
+    sh:path <https://w3id.org/dsv#datatype>;
+    sh:class rdfs:Datatype.
+
+<https://example.com/profile/vocabulary#dsv:DatatypePropertyProfileShape> sh:property <https://example.com/profile/vocabulary#dsv:DatatypePropertyProfileShape/2664e875>, <https://example.com/profile/vocabulary#dsv:PropertyProfileShape/e9586c3>, <https://example.com/profile/vocabulary#dsv:PropertyProfileShape/-6f56dc3>, <https://example.com/profile/vocabulary#dsv:PropertyProfileShape/-dc2b69c>, <https://example.com/profile/vocabulary#dsv:PropertyProfileShape/4bd43ddd>, <https://example.com/profile/vocabulary#dsv:TermProfileShape/1b4df4a4>, <https://example.com/profile/vocabulary#dsv:TermProfileShape/3c673b4e>, <https://example.com/profile/vocabulary#dsv:TermProfileShape/-513533d4>.
+
+<https://example.com/profile/vocabulary#dsv:InvalidTermProfileShape> a sh:NodeShape;
+    rdfs:seeAlso <https://example.com/profile/vocabulary#InvalidTermProfile>;
+    sh:closed false;
+    sh:targetClass <https://w3id.org/dsv#InvalidTermProfile>;
+    sh:property <https://example.com/profile/vocabulary#dsv:TermProfileShape/1b4df4a4>, <https://example.com/profile/vocabulary#dsv:TermProfileShape/3c673b4e>, <https://example.com/profile/vocabulary#dsv:TermProfileShape/-513533d4>.
+
+<https://example.com/profile/vocabulary#dsv:PropertyProfileShape> a sh:NodeShape;
+    rdfs:seeAlso <https://example.com/profile/vocabulary#PropertyProfile>;
+    sh:closed false;
+    sh:targetClass <https://w3id.org/dsv#PropertyProfile>;
+    sh:property <https://example.com/profile/vocabulary#dsv:PropertyProfileShape/e9586c3>, <https://example.com/profile/vocabulary#dsv:PropertyProfileShape/-6f56dc3>, <https://example.com/profile/vocabulary#dsv:PropertyProfileShape/-dc2b69c>, <https://example.com/profile/vocabulary#dsv:PropertyProfileShape/4bd43ddd>, <https://example.com/profile/vocabulary#dsv:TermProfileShape/1b4df4a4>, <https://example.com/profile/vocabulary#dsv:TermProfileShape/3c673b4e>, <https://example.com/profile/vocabulary#dsv:TermProfileShape/-513533d4>.
+
+<https://example.com/profile/vocabulary#dsv:ApplicationProfileSpecificationDocumentShape> a sh:NodeShape;
+    rdfs:seeAlso <https://example.com/profile/vocabulary#ApplicationProfileSpecificationDocument>;
+    sh:closed false;
+    sh:targetClass <https://w3id.org/dsv#ApplicationProfileSpecificationDocument>.
+
+<https://example.com/profile/vocabulary#dsv:VocabularySpecificationDocumentShape> a sh:NodeShape;
+    rdfs:seeAlso <https://example.com/profile/vocabulary#VocabularySpecificationDocument>;
+    sh:closed false;
+    sh:targetClass <https://w3id.org/dsv#VocabularySpecificationDocument>.
+

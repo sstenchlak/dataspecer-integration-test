@@ -1,0 +1,450 @@
+@prefix : <https://example.com/profile/vocabulary#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix dsv: <https://w3id.org/dsv#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix vann: <http://purl.org/vocab/vann/>.
+@prefix cardinality: <https://w3id.org/dsv/cardinality#>.
+@prefix requirement: <https://w3id.org/dsv/requirement-level#>.
+@prefix role: <https://w3id.org/dsv/class-role#>.
+@prefix prof: <http://www.w3.org/ns/dx/prof/>.
+
+
+<https://example.com/profile/vocabulary#> a prof:Profile, dsv:ApplicationProfile.
+:ApplicationProfile dct:isPartOf <https://example.com/profile/vocabulary#>;
+    a dsv:TermProfile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:ApplicationProfile
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:ApplicationProfile
+];
+    a dsv:ClassProfile;
+    dsv:class dsv:ApplicationProfile.
+:PropertyValueReuse dct:isPartOf <https://example.com/profile/vocabulary#>;
+    a dsv:TermProfile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:PropertyValueReuse
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:PropertyValueReuse
+];
+    a dsv:ClassProfile;
+    dsv:class dsv:PropertyValueReuse.
+:TermProfile dct:isPartOf <https://example.com/profile/vocabulary#>;
+    a dsv:TermProfile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:TermProfile
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:TermProfile
+];
+    a dsv:ClassProfile;
+    dsv:class dsv:TermProfile.
+:ClassProfile dct:isPartOf <https://example.com/profile/vocabulary#>;
+    a dsv:TermProfile;
+    dsv:specializes :TermProfile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:ClassProfile
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:ClassProfile
+];
+    a dsv:ClassProfile;
+    dsv:class dsv:ClassProfile.
+:ObjectPropertyProfile dct:isPartOf <https://example.com/profile/vocabulary#>;
+    a dsv:TermProfile;
+    dsv:specializes :PropertyProfile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:ObjectPropertyProfile
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:ObjectPropertyProfile
+];
+    a dsv:ClassProfile;
+    dsv:class dsv:ObjectPropertyProfile.
+:DatatypePropertyProfile dct:isPartOf <https://example.com/profile/vocabulary#>;
+    a dsv:TermProfile;
+    dsv:specializes :PropertyProfile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:DatatypePropertyProfile
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:DatatypePropertyProfile
+];
+    a dsv:ClassProfile;
+    dsv:class dsv:DatatypePropertyProfile.
+:InvalidTermProfile dct:isPartOf <https://example.com/profile/vocabulary#>;
+    a dsv:TermProfile;
+    dsv:specializes :TermProfile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:InvalidTermProfile
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:InvalidTermProfile
+];
+    a dsv:ClassProfile;
+    dsv:class dsv:InvalidTermProfile.
+:PropertyProfile dct:isPartOf <https://example.com/profile/vocabulary#>;
+    a dsv:TermProfile;
+    dsv:specializes :TermProfile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:PropertyProfile
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:PropertyProfile
+];
+    a dsv:ClassProfile;
+    dsv:class dsv:PropertyProfile.
+:ApplicationProfileSpecificationDocument dct:isPartOf <https://example.com/profile/vocabulary#>;
+    a dsv:TermProfile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:ApplicationProfileSpecificationDocument
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:ApplicationProfileSpecificationDocument
+];
+    a dsv:ClassProfile;
+    dsv:class dsv:ApplicationProfileSpecificationDocument.
+:VocabularySpecificationDocument dct:isPartOf <https://example.com/profile/vocabulary#>;
+    a dsv:TermProfile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:VocabularySpecificationDocument
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:VocabularySpecificationDocument
+];
+    a dsv:ClassProfile;
+    dsv:class dsv:VocabularySpecificationDocument.
+:reusedFromResource dct:isPartOf <https://example.com/profile/vocabulary#>;
+    a dsv:TermProfile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:reusedFromResource
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:reusedFromResource
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:scopeNote;
+  dsv:reusedFromResource dsv:reusedFromResource
+];
+    dsv:cardinality cardinality:0n;
+    dsv:property dsv:reusedFromResource;
+    dsv:domain :PropertyValueReuse;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange rdfs:Resource.
+:reusedProperty dct:isPartOf <https://example.com/profile/vocabulary#>;
+    a dsv:TermProfile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:reusedProperty
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:reusedProperty
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:scopeNote;
+  dsv:reusedFromResource dsv:reusedProperty
+];
+    dsv:cardinality cardinality:0n;
+    dsv:property dsv:reusedProperty;
+    dsv:domain :PropertyValueReuse;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange rdf:Property.
+:reusedAsProperty dct:isPartOf <https://example.com/profile/vocabulary#>;
+    a dsv:TermProfile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:reusedAsProperty
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:reusedAsProperty
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:scopeNote;
+  dsv:reusedFromResource dsv:reusedAsProperty
+];
+    dsv:cardinality cardinality:0n;
+    dsv:property dsv:reusedAsProperty;
+    dsv:domain :PropertyValueReuse;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange rdf:Property.
+:profileOf dct:isPartOf <https://example.com/profile/vocabulary#>;
+    a dsv:TermProfile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:profileOf
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:profileOf
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:scopeNote;
+  dsv:reusedFromResource dsv:profileOf
+];
+    dsv:cardinality cardinality:0n;
+    dsv:property dsv:profileOf;
+    dsv:domain :TermProfile;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange :TermProfile.
+:reusesPropertyValue dct:isPartOf <https://example.com/profile/vocabulary#>;
+    a dsv:TermProfile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:reusesPropertyValue
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:reusesPropertyValue
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:scopeNote;
+  dsv:reusedFromResource dsv:reusesPropertyValue
+];
+    dsv:cardinality cardinality:0n;
+    dsv:property dsv:reusesPropertyValue;
+    dsv:domain :TermProfile;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange :PropertyValueReuse.
+:specializes dct:isPartOf <https://example.com/profile/vocabulary#>;
+    a dsv:TermProfile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:specializes
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:specializes
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:scopeNote;
+  dsv:reusedFromResource dsv:specializes
+];
+    dsv:cardinality cardinality:0n;
+    dsv:property dsv:specializes;
+    dsv:domain :TermProfile;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange :TermProfile.
+:classRole dct:isPartOf <https://example.com/profile/vocabulary#>;
+    a dsv:TermProfile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:classRole
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:classRole
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:scopeNote;
+  dsv:reusedFromResource dsv:classRole
+];
+    dsv:cardinality cardinality:0n;
+    dsv:property dsv:classRole;
+    dsv:domain :ClassProfile;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange skos:Concept.
+:class dct:isPartOf <https://example.com/profile/vocabulary#>;
+    a dsv:TermProfile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:class
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:class
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:scopeNote;
+  dsv:reusedFromResource dsv:class
+];
+    dsv:cardinality cardinality:0n;
+    dsv:property dsv:class;
+    dsv:domain :ClassProfile;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange rdfs:Class.
+:range dct:isPartOf <https://example.com/profile/vocabulary#>;
+    a dsv:TermProfile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:range
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:range
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:scopeNote;
+  dsv:reusedFromResource dsv:range
+];
+    dsv:cardinality cardinality:0n;
+    dsv:property dsv:range;
+    dsv:domain :ObjectPropertyProfile;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange :ClassProfile.
+:datatype dct:isPartOf <https://example.com/profile/vocabulary#>;
+    a dsv:TermProfile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:datatype
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:datatype
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:scopeNote;
+  dsv:reusedFromResource dsv:datatype
+];
+    dsv:cardinality cardinality:0n;
+    dsv:property dsv:datatype;
+    dsv:domain :DatatypePropertyProfile;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange rdfs:Datatype.
+:property dct:isPartOf <https://example.com/profile/vocabulary#>;
+    a dsv:TermProfile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:property
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:property
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:scopeNote;
+  dsv:reusedFromResource dsv:property
+];
+    dsv:cardinality cardinality:0n;
+    dsv:property dsv:property;
+    dsv:domain :PropertyProfile;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange rdf:Property.
+:domain dct:isPartOf <https://example.com/profile/vocabulary#>;
+    a dsv:TermProfile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:domain
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:domain
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:scopeNote;
+  dsv:reusedFromResource dsv:domain
+];
+    dsv:cardinality cardinality:0n;
+    dsv:property dsv:domain;
+    dsv:domain :PropertyProfile;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange :ClassProfile.
+:cardinality dct:isPartOf <https://example.com/profile/vocabulary#>;
+    a dsv:TermProfile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:cardinality
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:cardinality
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:scopeNote;
+  dsv:reusedFromResource dsv:cardinality
+];
+    dsv:cardinality cardinality:0n;
+    dsv:property dsv:cardinality;
+    dsv:domain :PropertyProfile;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange skos:Concept.
+:requirementLevel dct:isPartOf <https://example.com/profile/vocabulary#>;
+    a dsv:TermProfile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:requirementLevel
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:requirementLevel
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:scopeNote;
+  dsv:reusedFromResource dsv:requirementLevel
+];
+    dsv:cardinality cardinality:0n;
+    dsv:property dsv:requirementLevel;
+    dsv:domain :PropertyProfile;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange skos:Concept.
+:externalDocumentation dct:isPartOf <https://example.com/profile/vocabulary#>;
+    a dsv:TermProfile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:externalDocumentation
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:externalDocumentation
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:scopeNote;
+  dsv:reusedFromResource dsv:externalDocumentation
+];
+    dsv:cardinality cardinality:0n;
+    dsv:property dsv:externalDocumentation;
+    dsv:domain rdfs:Resource;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange rdfs:Resource.

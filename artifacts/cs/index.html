@@ -1,0 +1,1908 @@
+
+
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <title>stenchlak dsv-ap</title>
+    <meta name="color-scheme" content="light dark">
+    <script type="application/ld+json">
+      {
+      "@id": "https://example.com/profile/vocabulary/",
+      "@type": [
+        "dsv:ApplicationProfileSpecificationDocument",
+        "adms:AssetDistribution",
+        "prof:ResourceDescriptor"
+      ],
+      "hasArtifact": "",
+      "hasRole": "role:specification",
+      "format": "filetype:HTML",
+      "inSpecificationOf": [
+        {
+          "@id": "https://example.com/profile/vocabulary#",
+          "@type": [
+            "dsv:ApplicationProfile",
+            "prof:Profile"
+          ],
+          "title": {
+            "en": "stenchlak dsv-ap"
+          },
+          "isProfileOf": [
+            {
+              "@id": "https://w3id.org/dsv#",
+              "title": {},
+              "hasResource": {
+                "hasArtifact": "https://mff-uk.github.io/data-specification-vocabulary/dsv/"
+              }
+            }
+          ],
+          "hasResource": [
+            {
+              "@id": "https://example.com/profile/vocabulary/#dsv",
+              "@type": [
+                "adms:AssetDistribution",
+                "prof:ResourceDescriptor"
+              ],
+              "hasArtifact": "../dsv.ttl",
+              "hasRole": "role:constraints",
+              "format": "filetype:RDF_TURTLE",
+              "conformsTo": [
+                "prof:Profile",
+                "dsv:ApplicationProfile"
+              ]
+            },
+            {
+              "@id": "https://example.com/profile/vocabulary/#shacl",
+              "@type": [
+                "adms:AssetDistribution",
+                "prof:ResourceDescriptor"
+              ],
+              "hasArtifact": "../shacl.ttl",
+              "hasRole": "role:constraints",
+              "format": "filetype:RDF_TURTLE",
+              "conformsTo": "https://www.w3.org/TR/shacl/"
+            },
+            {
+              "@id": "https://example.com/profile/vocabulary/#http://dataspecer.com/packages/local-root/fda5a5ac-bf6a-4d28-a5f0-89224a8d9726/visual-model",
+              "@type": [
+                "adms:AssetDistribution",
+                "prof:ResourceDescriptor"
+              ],
+              "hasArtifact": "../http:/dataspecer.com/packages/local-root/fda5a5ac-bf6a-4d28-a5f0-89224a8d9726/visual-model.svg",
+              "hasRole": "role:guidance",
+              "format": "filetype:SVG",
+              "conformsTo": "https://www.w3.org/TR/SVG/"
+            },
+            {
+              "@id": "https://example.com/profile/vocabulary/",
+              "@type": [
+                "dsv:ApplicationProfileSpecificationDocument",
+                "adms:AssetDistribution",
+                "prof:ResourceDescriptor"
+              ],
+              "hasArtifact": "",
+              "hasRole": "role:specification",
+              "format": "filetype:HTML"
+            }
+          ]
+        }
+      ],
+      "@context": {
+        "@version": 1.1,
+        "prof": "http://www.w3.org/ns/dx/prof/",
+        "role": "prof:role/",
+        "dsv": "https://w3id.org/dsv#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "adms": "http://www.w3.org/ns/adms#",
+        "filetype": "http://publications.europa.eu/resource/authority/file-type/",
+        "title": {
+          "@id": "http://purl.org/dc/terms/title",
+          "@container": "@language"
+        },
+        "description": {
+          "@id": "http://purl.org/dc/terms/description",
+          "@container": "@language"
+        },
+        "conformsTo": {
+          "@id": "http://purl.org/dc/terms/conformsTo",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "format": {
+          "@id": "http://purl.org/dc/terms/format",
+          "@type": "@id"
+        },
+        "hasRole": {
+          "@id": "prof:hasRole",
+          "@type": "@id"
+        },
+        "hasArtifact": {
+          "@id": "prof:hasArtifact",
+          "@type": "@id"
+        },
+        "inSpecificationOf": {
+          "@reverse": "prof:hasResource",
+          "@type": "@id",
+          "@context": {
+            "title": {
+              "@id": "http://purl.org/dc/terms/title",
+              "@container": "@language"
+            },
+            "description": {
+              "@id": "http://purl.org/dc/terms/description",
+              "@container": "@language"
+            },
+            "hasToken": {
+              "@id": "prof:hasToken",
+              "@type": "xsd:token"
+            },
+            "isProfileOf": {
+              "@id": "prof:isProfileOf",
+              "@container": "@set",
+              "@context": {
+                "title": {
+                  "@id": "http://purl.org/dc/terms/title",
+                  "@container": "@language"
+                },
+                "hasResource": {
+                  "@id": "prof:hasResource",
+                  "@container": "@set",
+                  "@context": {
+                    "hasArtifact": {
+                      "@id": "prof:hasArtifact",
+                      "@type": "@id"
+                    }
+                  }
+                }
+              }
+            },
+            "hasResource": {
+              "@id": "prof:hasResource",
+              "@container": "@set",
+              "@context": {
+                "conformsTo": {
+                  "@id": "http://purl.org/dc/terms/conformsTo",
+                  "@type": "@id",
+                  "@container": "@set"
+                },
+                "format": {
+                  "@id": "http://purl.org/dc/terms/format",
+                  "@type": "@id"
+                },
+                "hasRole": {
+                  "@id": "prof:hasRole",
+                  "@type": "@id"
+                },
+                "hasArtifact": {
+                  "@id": "prof:hasArtifact",
+                  "@type": "@id"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    </script>
+    <script
+      src="https://www.w3.org/Tools/respec/respec-w3c"
+      class="remove"
+      defer
+    ></script>
+    <script class="remove">
+    // All config options at https://respec.org/docs/
+    var respecConfig = {
+      specStatus: "base",
+      editors: [{ name: "Dataspecer", url: "https://dataspecer.com" }],
+      //github: "some-org/mySpec",
+      shortName: "todo",
+      historyURI: null,
+      //thisVersion: "https://xx.github.io/yy/",
+      //latestVersion: "https://xx.github.io/yy/",
+      //publishDate: "2025-09-29",
+      //github: "https://github.com/org/repo",
+      //xref: "web-platform",
+      //group: "my-working-group",
+      //otherLinks: [{
+      //    key: "Repository",
+      //    data: [{
+      //        value: "GitHub",
+      //        href: "https://github.com/org/repo"
+      //    }],
+      //}],
+      localBiblio: {
+            "DCAT-AP": {
+                title: "DCAT Application Profile for data portals in Europe",
+                href: "https://semiceu.github.io/DCAT-AP/releases/3.0.1/",
+                date: "2024"
+            },
+            "GeoDCAT-AP": {
+                title: "GeoDCAT Application Profile for data portals in Europe",
+                href: "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/",
+                date: "2024"
+            },
+            "DCAT-AP-HVD": {
+                title: "DCAT-AP HVD Application Profile",
+                href: "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd/",
+                date: "2024"
+            }
+        },};</script>
+    
+    <style>
+      .figure img, .sidefigure img, figure img, .figure object, .sidefigure object, figure object, img, .img {
+        max-width: 100%;
+        margin: auto;
+        height: auto;
+      }
+    
+      table.simple {
+        margin: auto;
+        border-spacing: 0;
+        border-collapse: collapse;
+      }
+    
+      table.simple th {
+        padding: 3px 10px;
+        text-align: left;
+      }
+    
+      table.simple td {
+        border-top: 1px solid #ddd;
+        padding: 3px 10px;
+      }
+    </style>  </head>
+  <body>
+    <p class="copyright"></p>
+    <section id="abstract">
+      <p>
+      Tento soubor dokumentuje
+      <strong>stenchlak dsv-ap</strong> (@en).</p>
+    </section>
+    <section>
+      <h2>Úvod</h2>
+      <p>Toto je úvod</p>
+      </section>
+    <section>
+      <h2>Přehled</h2>
+
+        <a href="../http:/dataspecer.com/packages/local-root/fda5a5ac-bf6a-4d28-a5f0-89224a8d9726/visual-model.svg">
+          <figure>
+            <img src="../http:/dataspecer.com/packages/local-root/fda5a5ac-bf6a-4d28-a5f0-89224a8d9726/visual-model.svg" alt="View for stenchlak dsv-ap" />
+            <figcaption>View for stenchlak dsv-ap</figcaption>
+          </figure>
+        </a>
+    </section>
+
+
+
+      <section>
+          <h2>Profily tříd</h2>
+
+          <section id="ApplicationProfileSpecificationDocument">
+            <h4>Application Profile Specification Document (@en)</h4>
+          
+            <table class="def">
+              <tr>
+                <td>IRI profilovaných tříd</td>
+                <td>
+                    
+                    <a href="https://w3id.org/dsv#ApplicationProfileSpecificationDocument">dsv:ApplicationProfileSpecificationDocument</a>
+                </td>
+              </tr>
+              <tr>
+                <td>IRI</td>
+                <td><a href="https://example.com/profile/vocabulary#ApplicationProfileSpecificationDocument">https://example.com/profile/vocabulary#ApplicationProfileSpecificationDocument</a></td>
+              </tr>
+              <tr>
+                <td>Název</td>
+                <td>Application Profile Specification Document (@en)</td>
+              </tr>
+              <tr>
+                <td>Definice</td>
+                <td>An Application Profile Specification Document contains human-readable version of an Application Profile. (@en)</td>
+              </tr>
+          
+                <tr>
+                  <td>Hierarchie</td>
+                  <td>
+                    <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                          <li>
+                                    profiluje
+                třídu
+                
+                <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#ApplicationProfileSpecificationDocument">Application Profile Specification Document (@en)</a> (<a href="https://w3id.org/dsv#ApplicationProfileSpecificationDocument">dsv:ApplicationProfileSpecificationDocument</a>)
+                  <br />Definice: <i>An Application Profile Specification Document contains human-readable version of an Application Profile.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                      <li>
+                                  specializuje
+                třídu
+                
+                <a href="http://www.w3.org/ns/dx/prof/ResourceDescriptor">Resource Descriptor (@en)</a> (<a href="http://www.w3.org/ns/dx/prof/ResourceDescriptor">prof:ResourceDescriptor</a>)
+                  <br />Definice: <i>A description of a resource that defines an aspect - a particular part, feature or role - of a Profile</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                  </ul>
+          
+                      </li>
+                  </ul>
+          
+                          </li>
+                    </ul>
+                  </td>
+                </tr>
+          
+            </table>
+          
+          
+          
+          </section>          <section id="ApplicationProfile">
+            <h4>Konceptuální model</h4>
+          
+            <table class="def">
+              <tr>
+                <td>IRI profilovaných tříd</td>
+                <td>
+                    
+                    <a href="https://w3id.org/dsv#ApplicationProfile">dsv:ApplicationProfile</a>
+                </td>
+              </tr>
+              <tr>
+                <td>IRI</td>
+                <td><a href="https://example.com/profile/vocabulary#ApplicationProfile">https://example.com/profile/vocabulary#ApplicationProfile</a></td>
+              </tr>
+              <tr>
+                <td>Název</td>
+                <td>Konceptuální model</td>
+              </tr>
+              <tr>
+                <td>Definice</td>
+                <td>Konceptuální model obsahující profily tříd a vlastností různých slovníků.</td>
+              </tr>
+          
+                <tr>
+                  <td>Hierarchie</td>
+                  <td>
+                    <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                          <li>
+                                    profiluje
+                třídu
+                
+                <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#ApplicationProfile">Konceptuální model</a> (<a href="https://w3id.org/dsv#ApplicationProfile">dsv:ApplicationProfile</a>)
+                  <br />Definice: <i>Konceptuální model obsahující profily tříd a vlastností různých slovníků.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                  </ul>
+          
+                          </li>
+                    </ul>
+                  </td>
+                </tr>
+          
+            </table>
+          
+          
+          
+          </section>          <section id="InvalidTermProfile">
+            <h4>Nevalidní profil</h4>
+          
+            <table class="def">
+              <tr>
+                <td>IRI profilovaných tříd</td>
+                <td>
+                    
+                    <a href="https://w3id.org/dsv#InvalidTermProfile">dsv:InvalidTermProfile</a>
+                </td>
+              </tr>
+              <tr>
+                <td>IRI</td>
+                <td><a href="https://example.com/profile/vocabulary#InvalidTermProfile">https://example.com/profile/vocabulary#InvalidTermProfile</a></td>
+              </tr>
+              <tr>
+                <td>Název</td>
+                <td>Nevalidní profil</td>
+              </tr>
+              <tr>
+                <td>Definice</td>
+                <td>Neplatný profil je profil, který porušuje pravidla pro správné profilování. To může být z dobrého důvodu, jako je dočasná nekonzistence, která se má teprve projevit na profilované entitě.</td>
+              </tr>
+          
+                <tr>
+                  <td>Hierarchie</td>
+                  <td>
+                    <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                          <li>
+                                    profiluje
+                třídu
+                
+                <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#InvalidTermProfile">Nevalidní profil</a> (<a href="https://w3id.org/dsv#InvalidTermProfile">dsv:InvalidTermProfile</a>)
+                  <br />Definice: <i>Neplatný profil je profil, který porušuje pravidla pro správné profilování. To může být z dobrého důvodu, jako je dočasná nekonzistence, která se má teprve projevit na profilované entitě.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                      <li>
+                                  specializuje
+                třídu
+                
+                <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#TermProfile">Profil</a> (<a href="https://w3id.org/dsv#TermProfile">dsv:TermProfile</a>)
+                  <br />Definice: <i>Profil entity. Umožňuje blíže specifikovat některé její vlastnost v kontextu aplikačního profilu.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                  </ul>
+          
+                      </li>
+                  </ul>
+          
+                          </li>
+                        <li>
+                                  specializuje
+                
+                profil
+                <a href="#TermProfile">Profil</a> (<a href="https://example.com/profile/vocabulary#TermProfile">https://example.com/profile/vocabulary#TermProfile</a>)
+                  <ul style="list-style-type: disclosure-closed;">
+                      <li>
+                                  profiluje
+                třídu
+                
+                <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#TermProfile">Profil</a> (<a href="https://w3id.org/dsv#TermProfile">dsv:TermProfile</a>)
+                  <br />Definice: <i>Profil entity. Umožňuje blíže specifikovat některé její vlastnost v kontextu aplikačního profilu.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                  </ul>
+          
+                      </li>
+                  </ul>
+          
+                        </li>
+                    </ul>
+                  </td>
+                </tr>
+          
+            </table>
+          
+          
+          
+          </section>          <section id="TermProfile">
+            <h4>Profil</h4>
+          
+            <table class="def">
+              <tr>
+                <td>IRI profilovaných tříd</td>
+                <td>
+                    
+                    <a href="https://w3id.org/dsv#TermProfile">dsv:TermProfile</a>
+                </td>
+              </tr>
+              <tr>
+                <td>IRI</td>
+                <td><a href="https://example.com/profile/vocabulary#TermProfile">https://example.com/profile/vocabulary#TermProfile</a></td>
+              </tr>
+              <tr>
+                <td>Název</td>
+                <td>Profil</td>
+              </tr>
+              <tr>
+                <td>Definice</td>
+                <td>Profil entity. Umožňuje blíže specifikovat některé její vlastnost v kontextu aplikačního profilu.</td>
+              </tr>
+          
+                <tr>
+                  <td>Hierarchie</td>
+                  <td>
+                    <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                          <li>
+                                    profiluje
+                třídu
+                
+                <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#TermProfile">Profil</a> (<a href="https://w3id.org/dsv#TermProfile">dsv:TermProfile</a>)
+                  <br />Definice: <i>Profil entity. Umožňuje blíže specifikovat některé její vlastnost v kontextu aplikačního profilu.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                  </ul>
+          
+                          </li>
+                    </ul>
+                  </td>
+                </tr>
+          
+            </table>
+          
+              <p>Zpětné asociace</p>
+              <ul>
+                  <li>z domény <a href="#TermProfile"></a> → <a href="#profileOf"></a></li>
+                  <li>z domény <a href="#TermProfile"></a> → <a href="#specializes"></a></li>
+              </ul>
+          
+              <section id="profileOf">
+                <h4>profile of (@en)</h4>
+              
+                <table class="def">
+                  <tr>
+                    <td>IRI profilovaných vztahů</td>
+                    <td>
+                        
+                        <a href="https://w3id.org/dsv#profileOf">dsv:profileOf</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>IRI</td>
+                    <td><a href="https://example.com/profile/vocabulary#profileOf">https://example.com/profile/vocabulary#profileOf</a></td>
+                  </tr>
+                  <tr>
+                    <td>Název</td>
+                    <td>profile of (@en)</td>
+                  </tr>
+                  <tr>
+                    <td>Definice</td>
+                    <td>Specifies a parent profile of the current profile. (@en)</td>
+                  </tr>
+                  <tr>
+                    <td>Definiční obor</td>
+                    <td>
+                      <a href="#TermProfile">Profil</a>
+              
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Obor hodnot</td>
+                    <td>
+                      <a href="#TermProfile">Profil</a>
+              
+                          [0..*]
+              
+                  </td>
+                  </tr>
+              
+              
+              
+                    <tr>
+                      <td>Hierarchie</td>
+                      <td>
+                        <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                              <li>
+                                        profiluje
+                    vlastnost
+                    
+                    <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#profileOf">profile of (@en)</a> (<a href="https://w3id.org/dsv#profileOf">dsv:profileOf</a>)
+                      <br />Definice: <i>Specifies a parent profile of the current profile.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                      </ul>
+              
+                              </li>
+                        </ul>
+                      </td>
+                    </tr>
+              
+                </table>
+              </section>    <section id="reusesPropertyValue">
+                <h4>reuses property value (@en)</h4>
+              
+                <table class="def">
+                  <tr>
+                    <td>IRI profilovaných vztahů</td>
+                    <td>
+                        
+                        <a href="https://w3id.org/dsv#reusesPropertyValue">dsv:reusesPropertyValue</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>IRI</td>
+                    <td><a href="https://example.com/profile/vocabulary#reusesPropertyValue">https://example.com/profile/vocabulary#reusesPropertyValue</a></td>
+                  </tr>
+                  <tr>
+                    <td>Název</td>
+                    <td>reuses property value (@en)</td>
+                  </tr>
+                  <tr>
+                    <td>Definice</td>
+                    <td>Points to definitions of Property value reuse for this Profile. (@en)</td>
+                  </tr>
+                  <tr>
+                    <td>Definiční obor</td>
+                    <td>
+                      <a href="#TermProfile">Profil</a>
+              
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Obor hodnot</td>
+                    <td>
+                      <a href="#PropertyValueReuse">Property Value Reuse (@en)</a>
+              
+                          [0..*]
+              
+                  </td>
+                  </tr>
+              
+              
+              
+                    <tr>
+                      <td>Hierarchie</td>
+                      <td>
+                        <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                              <li>
+                                        profiluje
+                    vlastnost
+                    
+                    <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#reusesPropertyValue">reuses property value (@en)</a> (<a href="https://w3id.org/dsv#reusesPropertyValue">dsv:reusesPropertyValue</a>)
+                      <br />Definice: <i>Points to definitions of Property value reuse for this Profile.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                      </ul>
+              
+                              </li>
+                        </ul>
+                      </td>
+                    </tr>
+              
+                </table>
+              </section>    <section id="specializes">
+                <h4>specializes (@en)</h4>
+              
+                <table class="def">
+                  <tr>
+                    <td>IRI profilovaných vztahů</td>
+                    <td>
+                        
+                        <a href="https://w3id.org/dsv#specializes">dsv:specializes</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>IRI</td>
+                    <td><a href="https://example.com/profile/vocabulary#specializes">https://example.com/profile/vocabulary#specializes</a></td>
+                  </tr>
+                  <tr>
+                    <td>Název</td>
+                    <td>specializes (@en)</td>
+                  </tr>
+                  <tr>
+                    <td>Definice</td>
+                    <td>Specifies a profile specialized by this profile. (@en)</td>
+                  </tr>
+                  <tr>
+                    <td>Definiční obor</td>
+                    <td>
+                      <a href="#TermProfile">Profil</a>
+              
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Obor hodnot</td>
+                    <td>
+                      <a href="#TermProfile">Profil</a>
+              
+                          [0..*]
+              
+                  </td>
+                  </tr>
+              
+              
+              
+                    <tr>
+                      <td>Hierarchie</td>
+                      <td>
+                        <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                              <li>
+                                        profiluje
+                    vlastnost
+                    
+                    <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#specializes">specializes (@en)</a> (<a href="https://w3id.org/dsv#specializes">dsv:specializes</a>)
+                      <br />Definice: <i>Specifies a profile specialized by this profile.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                      </ul>
+              
+                              </li>
+                        </ul>
+                      </td>
+                    </tr>
+              
+                </table>
+              </section>
+          </section>          <section id="ObjectPropertyProfile">
+            <h4>Profil objektové vlastnosti</h4>
+          
+            <table class="def">
+              <tr>
+                <td>IRI profilovaných tříd</td>
+                <td>
+                    
+                    <a href="https://w3id.org/dsv#ObjectPropertyProfile">dsv:ObjectPropertyProfile</a>
+                </td>
+              </tr>
+              <tr>
+                <td>IRI</td>
+                <td><a href="https://example.com/profile/vocabulary#ObjectPropertyProfile">https://example.com/profile/vocabulary#ObjectPropertyProfile</a></td>
+              </tr>
+              <tr>
+                <td>Název</td>
+                <td>Profil objektové vlastnosti</td>
+              </tr>
+              <tr>
+                <td>Definice</td>
+                <td>Profile of an object property allows specification editors to specify profile-specific name, definition, usage note, domain, range, and cardinality. (@en)</td>
+              </tr>
+          
+                <tr>
+                  <td>Hierarchie</td>
+                  <td>
+                    <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                          <li>
+                                    profiluje
+                třídu
+                
+                <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#ObjectPropertyProfile">Profil objektové vlastnosti</a> (<a href="https://w3id.org/dsv#ObjectPropertyProfile">dsv:ObjectPropertyProfile</a>)
+                  <br />Definice: <i>Profile of an object property allows specification editors to specify profile-specific name, definition, usage note, domain, range, and cardinality.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                      <li>
+                                  specializuje
+                třídu
+                
+                <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#PropertyProfile">Profil vlastnosti</a> (<a href="https://w3id.org/dsv#PropertyProfile">dsv:PropertyProfile</a>)
+                  <br />Definice: <i>Profile of a property allows specification editors to specify profile specific name, definition, usage note, domain, range and cardinality.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                      <li>
+                                  specializuje
+                třídu
+                
+                <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#TermProfile">Profil</a> (<a href="https://w3id.org/dsv#TermProfile">dsv:TermProfile</a>)
+                  <br />Definice: <i>Profil entity. Umožňuje blíže specifikovat některé její vlastnost v kontextu aplikačního profilu.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                  </ul>
+          
+                      </li>
+                  </ul>
+          
+                      </li>
+                  </ul>
+          
+                          </li>
+                        <li>
+                                  specializuje
+                
+                profil
+                <a href="#PropertyProfile">Profil vlastnosti</a> (<a href="https://example.com/profile/vocabulary#PropertyProfile">https://example.com/profile/vocabulary#PropertyProfile</a>)
+                  <ul style="list-style-type: disclosure-closed;">
+                      <li>
+                                  profiluje
+                třídu
+                
+                <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#PropertyProfile">Profil vlastnosti</a> (<a href="https://w3id.org/dsv#PropertyProfile">dsv:PropertyProfile</a>)
+                  <br />Definice: <i>Profile of a property allows specification editors to specify profile specific name, definition, usage note, domain, range and cardinality.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                      <li>
+                                  specializuje
+                třídu
+                
+                <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#TermProfile">Profil</a> (<a href="https://w3id.org/dsv#TermProfile">dsv:TermProfile</a>)
+                  <br />Definice: <i>Profil entity. Umožňuje blíže specifikovat některé její vlastnost v kontextu aplikačního profilu.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                  </ul>
+          
+                      </li>
+                  </ul>
+          
+                      </li>
+                      <li>
+                                  specializuje
+                
+                profil
+                <a href="#TermProfile">Profil</a> (<a href="https://example.com/profile/vocabulary#TermProfile">https://example.com/profile/vocabulary#TermProfile</a>)
+                  <ul style="list-style-type: disclosure-closed;">
+                      <li>
+                                  profiluje
+                třídu
+                
+                <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#TermProfile">Profil</a> (<a href="https://w3id.org/dsv#TermProfile">dsv:TermProfile</a>)
+                  <br />Definice: <i>Profil entity. Umožňuje blíže specifikovat některé její vlastnost v kontextu aplikačního profilu.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                  </ul>
+          
+                      </li>
+                  </ul>
+          
+                      </li>
+                  </ul>
+          
+                        </li>
+                    </ul>
+                  </td>
+                </tr>
+          
+            </table>
+          
+          
+              <section id="range">
+                <h4>range (@en)</h4>
+              
+                <table class="def">
+                  <tr>
+                    <td>IRI profilovaných vztahů</td>
+                    <td>
+                        
+                        <a href="https://w3id.org/dsv#range">dsv:range</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>IRI</td>
+                    <td><a href="https://example.com/profile/vocabulary#range">https://example.com/profile/vocabulary#range</a></td>
+                  </tr>
+                  <tr>
+                    <td>Název</td>
+                    <td>range (@en)</td>
+                  </tr>
+                  <tr>
+                    <td>Definice</td>
+                    <td>Class profile, which is the range of the object property profile. (@en)</td>
+                  </tr>
+                  <tr>
+                    <td>Definiční obor</td>
+                    <td>
+                      <a href="#ObjectPropertyProfile">Profil objektové vlastnosti</a>
+              
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Obor hodnot</td>
+                    <td>
+                      <a href="#ClassProfile">Profil třídy</a>
+              
+                          [0..*]
+              
+                  </td>
+                  </tr>
+              
+              
+              
+                    <tr>
+                      <td>Hierarchie</td>
+                      <td>
+                        <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                              <li>
+                                        profiluje
+                    vlastnost
+                    
+                    <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#range">range (@en)</a> (<a href="https://w3id.org/dsv#range">dsv:range</a>)
+                      <br />Definice: <i>Class profile, which is the range of the object property profile.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                      </ul>
+              
+                              </li>
+                        </ul>
+                      </td>
+                    </tr>
+              
+                </table>
+              </section>
+          </section>          <section id="ClassProfile">
+            <h4>Profil třídy</h4>
+          
+            <table class="def">
+              <tr>
+                <td>IRI profilovaných tříd</td>
+                <td>
+                    
+                    <a href="https://w3id.org/dsv#ClassProfile">dsv:ClassProfile</a>
+                </td>
+              </tr>
+              <tr>
+                <td>IRI</td>
+                <td><a href="https://example.com/profile/vocabulary#ClassProfile">https://example.com/profile/vocabulary#ClassProfile</a></td>
+              </tr>
+              <tr>
+                <td>Název</td>
+                <td>Profil třídy</td>
+              </tr>
+              <tr>
+                <td>Definice</td>
+                <td>Profile of a class. Allows specification editors to specify profile specific names, definitions and usage notes. (@en)</td>
+              </tr>
+          
+                <tr>
+                  <td>Hierarchie</td>
+                  <td>
+                    <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                          <li>
+                                    profiluje
+                třídu
+                
+                <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#ClassProfile">Profil třídy</a> (<a href="https://w3id.org/dsv#ClassProfile">dsv:ClassProfile</a>)
+                  <br />Definice: <i>Profile of a class. Allows specification editors to specify profile specific names, definitions and usage notes.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                      <li>
+                                  specializuje
+                třídu
+                
+                <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#TermProfile">Profil</a> (<a href="https://w3id.org/dsv#TermProfile">dsv:TermProfile</a>)
+                  <br />Definice: <i>Profil entity. Umožňuje blíže specifikovat některé její vlastnost v kontextu aplikačního profilu.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                  </ul>
+          
+                      </li>
+                  </ul>
+          
+                          </li>
+                        <li>
+                                  specializuje
+                
+                profil
+                <a href="#TermProfile">Profil</a> (<a href="https://example.com/profile/vocabulary#TermProfile">https://example.com/profile/vocabulary#TermProfile</a>)
+                  <ul style="list-style-type: disclosure-closed;">
+                      <li>
+                                  profiluje
+                třídu
+                
+                <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#TermProfile">Profil</a> (<a href="https://w3id.org/dsv#TermProfile">dsv:TermProfile</a>)
+                  <br />Definice: <i>Profil entity. Umožňuje blíže specifikovat některé její vlastnost v kontextu aplikačního profilu.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                  </ul>
+          
+                      </li>
+                  </ul>
+          
+                        </li>
+                    </ul>
+                  </td>
+                </tr>
+          
+            </table>
+          
+              <p>Zpětné asociace</p>
+              <ul>
+                  <li>z domény <a href="#PropertyProfile"></a> → <a href="#domain"></a></li>
+                  <li>z domény <a href="#ObjectPropertyProfile"></a> → <a href="#range"></a></li>
+              </ul>
+          
+              <section id="classRole">
+                <h4>class role (@en)</h4>
+              
+                <table class="def">
+                  <tr>
+                    <td>IRI profilovaných vztahů</td>
+                    <td>
+                        
+                        <a href="https://w3id.org/dsv#classRole">dsv:classRole</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>IRI</td>
+                    <td><a href="https://example.com/profile/vocabulary#classRole">https://example.com/profile/vocabulary#classRole</a></td>
+                  </tr>
+                  <tr>
+                    <td>Název</td>
+                    <td>class role (@en)</td>
+                  </tr>
+                  <tr>
+                    <td>Definice</td>
+                    <td>Class role, e.g. Mandatory, Supportive, etc. (@en)</td>
+                  </tr>
+                  <tr>
+                    <td>Definiční obor</td>
+                    <td>
+                      <a href="#ClassProfile">Profil třídy</a>
+              
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Obor hodnot</td>
+                    <td>
+                      <a href="http://www.w3.org/2004/02/skos/core#Concept">Concept (@en)</a>
+              
+                          [0..*]
+              
+                  </td>
+                  </tr>
+              
+              
+              
+                    <tr>
+                      <td>Hierarchie</td>
+                      <td>
+                        <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                              <li>
+                                        profiluje
+                    vlastnost
+                    
+                    <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#classRole">class role (@en)</a> (<a href="https://w3id.org/dsv#classRole">dsv:classRole</a>)
+                      <br />Definice: <i>Class role, e.g. Mandatory, Supportive, etc.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                      </ul>
+              
+                              </li>
+                        </ul>
+                      </td>
+                    </tr>
+              
+                </table>
+              </section>    <section id="class">
+                <h4>profiled class (@en)</h4>
+              
+                <table class="def">
+                  <tr>
+                    <td>IRI profilovaných vztahů</td>
+                    <td>
+                        
+                        <a href="https://w3id.org/dsv#class">dsv:class</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>IRI</td>
+                    <td><a href="https://example.com/profile/vocabulary#class">https://example.com/profile/vocabulary#class</a></td>
+                  </tr>
+                  <tr>
+                    <td>Název</td>
+                    <td>profiled class (@en)</td>
+                  </tr>
+                  <tr>
+                    <td>Definice</td>
+                    <td>The profiled class. (@en)</td>
+                  </tr>
+                  <tr>
+                    <td>Definiční obor</td>
+                    <td>
+                      <a href="#ClassProfile">Profil třídy</a>
+              
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Obor hodnot</td>
+                    <td>
+                      <a href="http://www.w3.org/2000/01/rdf-schema#Class">Class (@en)</a>
+              
+                          [0..*]
+              
+                  </td>
+                  </tr>
+              
+              
+              
+                    <tr>
+                      <td>Hierarchie</td>
+                      <td>
+                        <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                              <li>
+                                        profiluje
+                    vlastnost
+                    
+                    <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#class">profiled class (@en)</a> (<a href="https://w3id.org/dsv#class">dsv:class</a>)
+                      <br />Definice: <i>The profiled class.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                      </ul>
+              
+                              </li>
+                        </ul>
+                      </td>
+                    </tr>
+              
+                </table>
+              </section>
+          </section>          <section id="PropertyProfile">
+            <h4>Profil vlastnosti</h4>
+          
+            <table class="def">
+              <tr>
+                <td>IRI profilovaných tříd</td>
+                <td>
+                    
+                    <a href="https://w3id.org/dsv#PropertyProfile">dsv:PropertyProfile</a>
+                </td>
+              </tr>
+              <tr>
+                <td>IRI</td>
+                <td><a href="https://example.com/profile/vocabulary#PropertyProfile">https://example.com/profile/vocabulary#PropertyProfile</a></td>
+              </tr>
+              <tr>
+                <td>Název</td>
+                <td>Profil vlastnosti</td>
+              </tr>
+              <tr>
+                <td>Definice</td>
+                <td>Profile of a property allows specification editors to specify profile specific name, definition, usage note, domain, range and cardinality. (@en)</td>
+              </tr>
+          
+                <tr>
+                  <td>Hierarchie</td>
+                  <td>
+                    <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                          <li>
+                                    profiluje
+                třídu
+                
+                <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#PropertyProfile">Profil vlastnosti</a> (<a href="https://w3id.org/dsv#PropertyProfile">dsv:PropertyProfile</a>)
+                  <br />Definice: <i>Profile of a property allows specification editors to specify profile specific name, definition, usage note, domain, range and cardinality.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                      <li>
+                                  specializuje
+                třídu
+                
+                <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#TermProfile">Profil</a> (<a href="https://w3id.org/dsv#TermProfile">dsv:TermProfile</a>)
+                  <br />Definice: <i>Profil entity. Umožňuje blíže specifikovat některé její vlastnost v kontextu aplikačního profilu.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                  </ul>
+          
+                      </li>
+                  </ul>
+          
+                          </li>
+                        <li>
+                                  specializuje
+                
+                profil
+                <a href="#TermProfile">Profil</a> (<a href="https://example.com/profile/vocabulary#TermProfile">https://example.com/profile/vocabulary#TermProfile</a>)
+                  <ul style="list-style-type: disclosure-closed;">
+                      <li>
+                                  profiluje
+                třídu
+                
+                <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#TermProfile">Profil</a> (<a href="https://w3id.org/dsv#TermProfile">dsv:TermProfile</a>)
+                  <br />Definice: <i>Profil entity. Umožňuje blíže specifikovat některé její vlastnost v kontextu aplikačního profilu.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                  </ul>
+          
+                      </li>
+                  </ul>
+          
+                        </li>
+                    </ul>
+                  </td>
+                </tr>
+          
+            </table>
+          
+          
+              <section id="domain">
+                <h4>domain (@en)</h4>
+              
+                <table class="def">
+                  <tr>
+                    <td>IRI profilovaných vztahů</td>
+                    <td>
+                        
+                        <a href="https://w3id.org/dsv#domain">dsv:domain</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>IRI</td>
+                    <td><a href="https://example.com/profile/vocabulary#domain">https://example.com/profile/vocabulary#domain</a></td>
+                  </tr>
+                  <tr>
+                    <td>Název</td>
+                    <td>domain (@en)</td>
+                  </tr>
+                  <tr>
+                    <td>Definice</td>
+                    <td>Class profile, which is the domain of the property profile. (@en)</td>
+                  </tr>
+                  <tr>
+                    <td>Definiční obor</td>
+                    <td>
+                      <a href="#PropertyProfile">Profil vlastnosti</a>
+              
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Obor hodnot</td>
+                    <td>
+                      <a href="#ClassProfile">Profil třídy</a>
+              
+                          [0..*]
+              
+                  </td>
+                  </tr>
+              
+              
+              
+                    <tr>
+                      <td>Hierarchie</td>
+                      <td>
+                        <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                              <li>
+                                        profiluje
+                    vlastnost
+                    
+                    <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#domain">domain (@en)</a> (<a href="https://w3id.org/dsv#domain">dsv:domain</a>)
+                      <br />Definice: <i>Class profile, which is the domain of the property profile.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                      </ul>
+              
+                              </li>
+                        </ul>
+                      </td>
+                    </tr>
+              
+                </table>
+              </section>    <section id="cardinality">
+                <h4>kardinalita</h4>
+              
+                <table class="def">
+                  <tr>
+                    <td>IRI profilovaných vztahů</td>
+                    <td>
+                        
+                        <a href="https://w3id.org/dsv#cardinality">dsv:cardinality</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>IRI</td>
+                    <td><a href="https://example.com/profile/vocabulary#cardinality">https://example.com/profile/vocabulary#cardinality</a></td>
+                  </tr>
+                  <tr>
+                    <td>Název</td>
+                    <td>kardinalita</td>
+                  </tr>
+                  <tr>
+                    <td>Definice</td>
+                    <td>Cardinality of the Property Profile. (@en)</td>
+                  </tr>
+                  <tr>
+                    <td>Definiční obor</td>
+                    <td>
+                      <a href="#PropertyProfile">Profil vlastnosti</a>
+              
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Obor hodnot</td>
+                    <td>
+                      <a href="http://www.w3.org/2004/02/skos/core#Concept">Concept (@en)</a>
+              
+                          [0..*]
+              
+                  </td>
+                  </tr>
+              
+              
+              
+                    <tr>
+                      <td>Hierarchie</td>
+                      <td>
+                        <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                              <li>
+                                        profiluje
+                    vlastnost
+                    
+                    <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#cardinality">kardinalita</a> (<a href="https://w3id.org/dsv#cardinality">dsv:cardinality</a>)
+                      <br />Definice: <i>Cardinality of the Property Profile.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                      </ul>
+              
+                              </li>
+                        </ul>
+                      </td>
+                    </tr>
+              
+                </table>
+              </section>    <section id="property">
+                <h4>profiled property (@en)</h4>
+              
+                <table class="def">
+                  <tr>
+                    <td>IRI profilovaných vztahů</td>
+                    <td>
+                        
+                        <a href="https://w3id.org/dsv#property">dsv:property</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>IRI</td>
+                    <td><a href="https://example.com/profile/vocabulary#property">https://example.com/profile/vocabulary#property</a></td>
+                  </tr>
+                  <tr>
+                    <td>Název</td>
+                    <td>profiled property (@en)</td>
+                  </tr>
+                  <tr>
+                    <td>Definice</td>
+                    <td>The property profiled by the property profile. (@en)</td>
+                  </tr>
+                  <tr>
+                    <td>Definiční obor</td>
+                    <td>
+                      <a href="#PropertyProfile">Profil vlastnosti</a>
+              
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Obor hodnot</td>
+                    <td>
+                      <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">Property (@en)</a>
+              
+                          [0..*]
+              
+                  </td>
+                  </tr>
+              
+              
+              
+                    <tr>
+                      <td>Hierarchie</td>
+                      <td>
+                        <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                              <li>
+                                        profiluje
+                    vlastnost
+                    
+                    <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#property">profiled property (@en)</a> (<a href="https://w3id.org/dsv#property">dsv:property</a>)
+                      <br />Definice: <i>The property profiled by the property profile.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                      </ul>
+              
+                              </li>
+                        </ul>
+                      </td>
+                    </tr>
+              
+                </table>
+              </section>    <section id="requirementLevel">
+                <h4>requirement level (@en)</h4>
+              
+                <table class="def">
+                  <tr>
+                    <td>IRI profilovaných vztahů</td>
+                    <td>
+                        
+                        <a href="https://w3id.org/dsv#requirementLevel">dsv:requirementLevel</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>IRI</td>
+                    <td><a href="https://example.com/profile/vocabulary#requirementLevel">https://example.com/profile/vocabulary#requirementLevel</a></td>
+                  </tr>
+                  <tr>
+                    <td>Název</td>
+                    <td>requirement level (@en)</td>
+                  </tr>
+                  <tr>
+                    <td>Definice</td>
+                    <td>Requirement level of the property, typically mandatory, recommended or optional. (@en)</td>
+                  </tr>
+                  <tr>
+                    <td>Definiční obor</td>
+                    <td>
+                      <a href="#PropertyProfile">Profil vlastnosti</a>
+              
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Obor hodnot</td>
+                    <td>
+                      <a href="http://www.w3.org/2004/02/skos/core#Concept">Concept (@en)</a>
+              
+                          [0..*]
+              
+                  </td>
+                  </tr>
+              
+              
+              
+                    <tr>
+                      <td>Hierarchie</td>
+                      <td>
+                        <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                              <li>
+                                        profiluje
+                    vlastnost
+                    
+                    <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#requirementLevel">requirement level (@en)</a> (<a href="https://w3id.org/dsv#requirementLevel">dsv:requirementLevel</a>)
+                      <br />Definice: <i>Requirement level of the property, typically mandatory, recommended or optional.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                      </ul>
+              
+                              </li>
+                        </ul>
+                      </td>
+                    </tr>
+              
+                </table>
+              </section>
+          </section>          <section id="DatatypePropertyProfile">
+            <h4>Profile atributu</h4>
+          
+            <table class="def">
+              <tr>
+                <td>IRI profilovaných tříd</td>
+                <td>
+                    
+                    <a href="https://w3id.org/dsv#DatatypePropertyProfile">dsv:DatatypePropertyProfile</a>
+                </td>
+              </tr>
+              <tr>
+                <td>IRI</td>
+                <td><a href="https://example.com/profile/vocabulary#DatatypePropertyProfile">https://example.com/profile/vocabulary#DatatypePropertyProfile</a></td>
+              </tr>
+              <tr>
+                <td>Název</td>
+                <td>Profile atributu</td>
+              </tr>
+              <tr>
+                <td>Definice</td>
+                <td>Profile of a datatype property allows specification editors to specify profile-specific name, definition, usage note, domain, datatype, and cardinality. (@en)</td>
+              </tr>
+          
+                <tr>
+                  <td>Hierarchie</td>
+                  <td>
+                    <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                          <li>
+                                    profiluje
+                třídu
+                
+                <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#DatatypePropertyProfile">Profile atributu</a> (<a href="https://w3id.org/dsv#DatatypePropertyProfile">dsv:DatatypePropertyProfile</a>)
+                  <br />Definice: <i>Profile of a datatype property allows specification editors to specify profile-specific name, definition, usage note, domain, datatype, and cardinality.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                      <li>
+                                  specializuje
+                třídu
+                
+                <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#PropertyProfile">Profil vlastnosti</a> (<a href="https://w3id.org/dsv#PropertyProfile">dsv:PropertyProfile</a>)
+                  <br />Definice: <i>Profile of a property allows specification editors to specify profile specific name, definition, usage note, domain, range and cardinality.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                      <li>
+                                  specializuje
+                třídu
+                
+                <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#TermProfile">Profil</a> (<a href="https://w3id.org/dsv#TermProfile">dsv:TermProfile</a>)
+                  <br />Definice: <i>Profil entity. Umožňuje blíže specifikovat některé její vlastnost v kontextu aplikačního profilu.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                  </ul>
+          
+                      </li>
+                  </ul>
+          
+                      </li>
+                  </ul>
+          
+                          </li>
+                        <li>
+                                  specializuje
+                
+                profil
+                <a href="#PropertyProfile">Profil vlastnosti</a> (<a href="https://example.com/profile/vocabulary#PropertyProfile">https://example.com/profile/vocabulary#PropertyProfile</a>)
+                  <ul style="list-style-type: disclosure-closed;">
+                      <li>
+                                  profiluje
+                třídu
+                
+                <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#PropertyProfile">Profil vlastnosti</a> (<a href="https://w3id.org/dsv#PropertyProfile">dsv:PropertyProfile</a>)
+                  <br />Definice: <i>Profile of a property allows specification editors to specify profile specific name, definition, usage note, domain, range and cardinality.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                      <li>
+                                  specializuje
+                třídu
+                
+                <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#TermProfile">Profil</a> (<a href="https://w3id.org/dsv#TermProfile">dsv:TermProfile</a>)
+                  <br />Definice: <i>Profil entity. Umožňuje blíže specifikovat některé její vlastnost v kontextu aplikačního profilu.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                  </ul>
+          
+                      </li>
+                  </ul>
+          
+                      </li>
+                      <li>
+                                  specializuje
+                
+                profil
+                <a href="#TermProfile">Profil</a> (<a href="https://example.com/profile/vocabulary#TermProfile">https://example.com/profile/vocabulary#TermProfile</a>)
+                  <ul style="list-style-type: disclosure-closed;">
+                      <li>
+                                  profiluje
+                třídu
+                
+                <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#TermProfile">Profil</a> (<a href="https://w3id.org/dsv#TermProfile">dsv:TermProfile</a>)
+                  <br />Definice: <i>Profil entity. Umožňuje blíže specifikovat některé její vlastnost v kontextu aplikačního profilu.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                  </ul>
+          
+                      </li>
+                  </ul>
+          
+                      </li>
+                  </ul>
+          
+                        </li>
+                    </ul>
+                  </td>
+                </tr>
+          
+            </table>
+          
+          
+              <section id="datatype">
+                <h4>datatype (@en)</h4>
+              
+                <table class="def">
+                  <tr>
+                    <td>IRI profilovaných vztahů</td>
+                    <td>
+                        
+                        <a href="https://w3id.org/dsv#datatype">dsv:datatype</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>IRI</td>
+                    <td><a href="https://example.com/profile/vocabulary#datatype">https://example.com/profile/vocabulary#datatype</a></td>
+                  </tr>
+                  <tr>
+                    <td>Název</td>
+                    <td>datatype (@en)</td>
+                  </tr>
+                  <tr>
+                    <td>Definice</td>
+                    <td>A datatype of the values of the Datatype Property Profile. (@en)</td>
+                  </tr>
+                  <tr>
+                    <td>Definiční obor</td>
+                    <td>
+                      <a href="#DatatypePropertyProfile">Profile atributu</a>
+              
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Obor hodnot</td>
+                    <td>
+                      <a href="http://www.w3.org/2000/01/rdf-schema#Datatype">Datatype (@en)</a>
+              
+                          [0..*]
+              
+                  </td>
+                  </tr>
+              
+              
+              
+                    <tr>
+                      <td>Hierarchie</td>
+                      <td>
+                        <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                              <li>
+                                        profiluje
+                    vlastnost
+                    
+                    <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#datatype">datatype (@en)</a> (<a href="https://w3id.org/dsv#datatype">dsv:datatype</a>)
+                      <br />Definice: <i>A datatype of the values of the Datatype Property Profile.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                      </ul>
+              
+                              </li>
+                        </ul>
+                      </td>
+                    </tr>
+              
+                </table>
+              </section>
+          </section>          <section id="PropertyValueReuse">
+            <h4>Property Value Reuse (@en)</h4>
+          
+            <table class="def">
+              <tr>
+                <td>IRI profilovaných tříd</td>
+                <td>
+                    
+                    <a href="https://w3id.org/dsv#PropertyValueReuse">dsv:PropertyValueReuse</a>
+                </td>
+              </tr>
+              <tr>
+                <td>IRI</td>
+                <td><a href="https://example.com/profile/vocabulary#PropertyValueReuse">https://example.com/profile/vocabulary#PropertyValueReuse</a></td>
+              </tr>
+              <tr>
+                <td>Název</td>
+                <td>Property Value Reuse (@en)</td>
+              </tr>
+              <tr>
+                <td>Definice</td>
+                <td>Specifies, which values of which properties of which resources are reused for the current Profile.
+          E.g. reuse of profile name, reuse of class name, reuse of profile definition, reuse of profile usage note, etc. (@en)</td>
+              </tr>
+          
+                <tr>
+                  <td>Hierarchie</td>
+                  <td>
+                    <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                          <li>
+                                    profiluje
+                třídu
+                
+                <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#PropertyValueReuse">Property Value Reuse (@en)</a> (<a href="https://w3id.org/dsv#PropertyValueReuse">dsv:PropertyValueReuse</a>)
+                  <br />Definice: <i>Specifies, which values of which properties of which resources are reused for the current Profile.
+          E.g. reuse of profile name, reuse of class name, reuse of profile definition, reuse of profile usage note, etc.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                  </ul>
+          
+                          </li>
+                    </ul>
+                  </td>
+                </tr>
+          
+            </table>
+          
+              <p>Zpětné asociace</p>
+              <ul>
+                  <li>z domény <a href="#TermProfile"></a> → <a href="#reusesPropertyValue"></a></li>
+              </ul>
+          
+              <section id="reusedAsProperty">
+                <h4>reused as property (@en)</h4>
+              
+                <table class="def">
+                  <tr>
+                    <td>IRI profilovaných vztahů</td>
+                    <td>
+                        
+                        <a href="https://w3id.org/dsv#reusedAsProperty">dsv:reusedAsProperty</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>IRI</td>
+                    <td><a href="https://example.com/profile/vocabulary#reusedAsProperty">https://example.com/profile/vocabulary#reusedAsProperty</a></td>
+                  </tr>
+                  <tr>
+                    <td>Název</td>
+                    <td>reused as property (@en)</td>
+                  </tr>
+                  <tr>
+                    <td>Definice</td>
+                    <td>The Property to gain the reused value. (@en)</td>
+                  </tr>
+                  <tr>
+                    <td>Definiční obor</td>
+                    <td>
+                      <a href="#PropertyValueReuse">Property Value Reuse (@en)</a>
+              
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Obor hodnot</td>
+                    <td>
+                      <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">Property (@en)</a>
+              
+                          [0..*]
+              
+                  </td>
+                  </tr>
+              
+              
+              
+                    <tr>
+                      <td>Hierarchie</td>
+                      <td>
+                        <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                              <li>
+                                        profiluje
+                    vlastnost
+                    
+                    <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#reusedAsProperty">reused as property (@en)</a> (<a href="https://w3id.org/dsv#reusedAsProperty">dsv:reusedAsProperty</a>)
+                      <br />Definice: <i>The Property to gain the reused value.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                      </ul>
+              
+                              </li>
+                        </ul>
+                      </td>
+                    </tr>
+              
+                </table>
+              </section>    <section id="reusedFromResource">
+                <h4>reused from resource (@en)</h4>
+              
+                <table class="def">
+                  <tr>
+                    <td>IRI profilovaných vztahů</td>
+                    <td>
+                        
+                        <a href="https://w3id.org/dsv#reusedFromResource">dsv:reusedFromResource</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>IRI</td>
+                    <td><a href="https://example.com/profile/vocabulary#reusedFromResource">https://example.com/profile/vocabulary#reusedFromResource</a></td>
+                  </tr>
+                  <tr>
+                    <td>Název</td>
+                    <td>reused from resource (@en)</td>
+                  </tr>
+                  <tr>
+                    <td>Definice</td>
+                    <td>The Resource on which there is a property with a value for reuse. (@en)</td>
+                  </tr>
+                  <tr>
+                    <td>Definiční obor</td>
+                    <td>
+                      <a href="#PropertyValueReuse">Property Value Reuse (@en)</a>
+              
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Obor hodnot</td>
+                    <td>
+                      <a href="http://www.w3.org/2000/01/rdf-schema#Resource">Resource (@en)</a>
+              
+                          [0..*]
+              
+                  </td>
+                  </tr>
+              
+              
+              
+                    <tr>
+                      <td>Hierarchie</td>
+                      <td>
+                        <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                              <li>
+                                        profiluje
+                    vlastnost
+                    
+                    <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#reusedFromResource">reused from resource (@en)</a> (<a href="https://w3id.org/dsv#reusedFromResource">dsv:reusedFromResource</a>)
+                      <br />Definice: <i>The Resource on which there is a property with a value for reuse.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                      </ul>
+              
+                              </li>
+                        </ul>
+                      </td>
+                    </tr>
+              
+                </table>
+              </section>    <section id="reusedProperty">
+                <h4>reused property (@en)</h4>
+              
+                <table class="def">
+                  <tr>
+                    <td>IRI profilovaných vztahů</td>
+                    <td>
+                        
+                        <a href="https://w3id.org/dsv#reusedProperty">dsv:reusedProperty</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>IRI</td>
+                    <td><a href="https://example.com/profile/vocabulary#reusedProperty">https://example.com/profile/vocabulary#reusedProperty</a></td>
+                  </tr>
+                  <tr>
+                    <td>Název</td>
+                    <td>reused property (@en)</td>
+                  </tr>
+                  <tr>
+                    <td>Definice</td>
+                    <td>The Property from which a value is reused. (@en)</td>
+                  </tr>
+                  <tr>
+                    <td>Definiční obor</td>
+                    <td>
+                      <a href="#PropertyValueReuse">Property Value Reuse (@en)</a>
+              
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Obor hodnot</td>
+                    <td>
+                      <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">Property (@en)</a>
+              
+                          [0..*]
+              
+                  </td>
+                  </tr>
+              
+              
+              
+                    <tr>
+                      <td>Hierarchie</td>
+                      <td>
+                        <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                              <li>
+                                        profiluje
+                    vlastnost
+                    
+                    <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#reusedProperty">reused property (@en)</a> (<a href="https://w3id.org/dsv#reusedProperty">dsv:reusedProperty</a>)
+                      <br />Definice: <i>The Property from which a value is reused.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                      </ul>
+              
+                              </li>
+                        </ul>
+                      </td>
+                    </tr>
+              
+                </table>
+              </section>
+          </section>          <section id="VocabularySpecificationDocument">
+            <h4>Vocabulary Specification Document (@en)</h4>
+          
+            <table class="def">
+              <tr>
+                <td>IRI profilovaných tříd</td>
+                <td>
+                    
+                    <a href="https://w3id.org/dsv#VocabularySpecificationDocument">dsv:VocabularySpecificationDocument</a>
+                </td>
+              </tr>
+              <tr>
+                <td>IRI</td>
+                <td><a href="https://example.com/profile/vocabulary#VocabularySpecificationDocument">https://example.com/profile/vocabulary#VocabularySpecificationDocument</a></td>
+              </tr>
+              <tr>
+                <td>Název</td>
+                <td>Vocabulary Specification Document (@en)</td>
+              </tr>
+              <tr>
+                <td>Definice</td>
+                <td>A Vocabulary Specification Document is a human-readable representation of a Vocabulary. (@en)</td>
+              </tr>
+          
+                <tr>
+                  <td>Hierarchie</td>
+                  <td>
+                    <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                          <li>
+                                    profiluje
+                třídu
+                
+                <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#VocabularySpecificationDocument">Vocabulary Specification Document (@en)</a> (<a href="https://w3id.org/dsv#VocabularySpecificationDocument">dsv:VocabularySpecificationDocument</a>)
+                  <br />Definice: <i>A Vocabulary Specification Document is a human-readable representation of a Vocabulary.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                      <li>
+                                  specializuje
+                třídu
+                
+                <a href="http://www.w3.org/ns/dx/prof/ResourceDescriptor">Resource Descriptor (@en)</a> (<a href="http://www.w3.org/ns/dx/prof/ResourceDescriptor">prof:ResourceDescriptor</a>)
+                  <br />Definice: <i>A description of a resource that defines an aspect - a particular part, feature or role - of a Profile</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                  </ul>
+          
+                      </li>
+                  </ul>
+          
+                          </li>
+                    </ul>
+                  </td>
+                </tr>
+          
+            </table>
+          
+          
+          
+          </section>      </section>
+
+
+
+
+    <section>
+      <h2>Použité prefixy</h2>
+      <table id="table-namespaces" class="simple">
+        <thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
+        <tbody>
+            <tr><td><code>dsv</code></td><td><a href="https://w3id.org/dsv#"><code>https://w3id.org/dsv#</code></a></td></tr>
+            <tr><td><code>prof</code></td><td><a href="http://www.w3.org/ns/dx/prof/"><code>http://www.w3.org/ns/dx/prof/</code></a></td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section id="přílohy">
+      <h2>Přílohy</h2>
+        <p>Součástí této specifikace jsou následující přílohy.</p>
+        <table class="def">
+        <thead>
+          <tr>
+            <th>Příloha</th>
+            <th>Odkaz</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+              <td>Aplikační profil</td>
+              <td><a href="../dsv.ttl">../dsv.ttl</a></td>
+            </tr>
+            <tr>
+              <td>SHACL validační pravidla</td>
+              <td><a href="../shacl.ttl">../shacl.ttl</a></td>
+            </tr>
+            <tr><td>PlantUML diagram</td><td><a href="../conceptual-model.plantuml">../conceptual-model.plantuml</a></td></tr>
+            <tr><td>Konceptuální diagram</td><td><a href="../conceptual-model.svg">../conceptual-model.svg</a></td></tr>
+            <tr><td>Dokumentace</td><td><a href="">#</a></td></tr>
+        </tbody>
+      </table>
+    </section>  </body>
+</html>
