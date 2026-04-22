@@ -1,6 +1,6 @@
 {
   "type": "http://dataspecer.com/resources/local/semantic-model",
-  "modelId": "http://dataspecer.com/packages/local-root/fda5a5ac-bf6a-4d28-a5f0-89224a8d9726/semantic-model",
+  "modelId": "5b7c2a7c-529f-4842-b8f4-ccf60c67912b",
   "modelAlias": "stenchlak dsv-ap",
   "baseIri": "https://example.com/profile/vocabulary#",
   "entities": {
@@ -116,29 +116,6 @@
       "externalDocumentationUrl": null,
       "tags": [],
       "id": "3fm7oru60h1mo9vmi6f",
-      "type": [
-        "class-profile"
-      ]
-    },
-    "ir9ztsn9mygmo9vmi6f": {
-      "iri": "DatatypePropertyProfile",
-      "profiling": [
-        "https://w3id.org/dsv#DatatypePropertyProfile"
-      ],
-      "name": {
-        "cs": "Profile atributu",
-        "en": "Datatype Property Profile"
-      },
-      "nameFromProfiled": "https://w3id.org/dsv#DatatypePropertyProfile",
-      "description": {
-        "en": "Profile of a datatype property allows specification editors to specify profile-specific name, definition, usage note, domain, datatype, and cardinality."
-      },
-      "descriptionFromProfiled": "https://w3id.org/dsv#DatatypePropertyProfile",
-      "usageNote": null,
-      "usageNoteFromProfiled": null,
-      "externalDocumentationUrl": null,
-      "tags": [],
-      "id": "ir9ztsn9mygmo9vmi6f",
       "type": [
         "class-profile"
       ]

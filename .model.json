@@ -1,7 +1,7 @@
 {
   "modelCompositionConfiguration": {
     "modelType": "application-profile",
-    "model": "http://dataspecer.com/packages/local-root/fda5a5ac-bf6a-4d28-a5f0-89224a8d9726/semantic-model",
+    "model": "5b7c2a7c-529f-4842-b8f4-ccf60c67912b",
     "profiles": {
       "modelType": "merge",
       "models": null

@@ -1,5 +1,5 @@
 {
-  "iri": "http://dataspecer.com/packages/local-root/fda5a5ac-bf6a-4d28-a5f0-89224a8d9726/semantic-model",
+  "iri": "5b7c2a7c-529f-4842-b8f4-ccf60c67912b",
   "projectIri": "87bca7a0-eb51-4ea4-8dc4-8b7ca0eb4da8",
   "types": [
     "http://dataspecer.com/resources/local/semantic-model"
@@ -14,8 +14,8 @@
     "baseIri": "https://example.com/profile/vocabulary#"
   },
   "metadata": {
-    "creationDate": "2026-04-22T10:26:40.852Z",
-    "modificationDate": "2026-04-22T10:26:40.904Z"
+    "creationDate": "2026-04-22T10:34:06.822Z",
+    "modificationDate": "2026-04-22T10:34:37.806Z"
   },
   "_version": 1,
   "_exportVersion": 2,
